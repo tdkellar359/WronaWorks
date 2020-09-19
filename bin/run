@@ -1,0 +1,17 @@
+#!/bin/bash
+# run
+
+# Stop on errors
+# See https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
+set -Eeuo pipefail
+
+# db_file=var/wronaworks.sqlite3
+
+# if [ ! -f "$db_file" ]; then
+#   bin/insta485db create
+# fi
+
+export FLASK_DEBUG=True
+export FLASK_APP=wronaworks
+export WRONA_WORKS_SETTINGS=config.py
+flask run --host 0.0.0.0 --port 8000
