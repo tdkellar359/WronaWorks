@@ -1,0 +1,39 @@
+.background-image {
+  background-image: url(/static/img/wood_planks.jpg);
+  background-size: 100% 100%;
+  height: 100vh;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+}
+
+.intro-tile-wrapper {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.intro-tile-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 50vh;
+}
+
+.intro-tile-list {
+  max-width: 50vh;
+  border-radius: 0.25em;
+}
+
+.explore-tile-wrapper {
+  height: 100vh;
+}
+
+.explore-tile-content {
+  width: 100%;
+  text-align: center;
+}

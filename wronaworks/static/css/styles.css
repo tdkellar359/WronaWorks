@@ -1,8 +1,40 @@
 html, body {
   font-size: 16px;
   height: 100%;
+  background-color: lightgrey !important;
+  overflow-y: auto;
 }
 
-body > .content {
-  padding: 2em;
+h1.navbar-brand {
+  font-size: 2em;
+}
+
+ul.navbar-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+li.nav-item ~ li.nav-item {
+  margin-left: 1em;
+}
+
+.footer {
+  background-color: darkgrey;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.translucent {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.snap-scroll {
+  scroll-snap-type: y proximity;
+}
+
+.snap-scroll-start {
+  scroll-snap-align: start;
 }

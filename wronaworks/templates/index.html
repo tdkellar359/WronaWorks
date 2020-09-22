@@ -1,6 +1,74 @@
 {% extends "base.html" %}
 {% block content %}
-<div>
-  <h1>Hello World!</h1>
+<link rel="stylesheet" href="/static/css/index_styles.css">
+<div class="snap-scroll">
+
+  <!-- Wood Pane Background Image -->
+  <div class="background-image tile snap-scroll-start">
+
+    <!-- A wrapper for the content -->
+    <div class="intro-tile-wrapper">
+
+      <!-- The circle thingy -->
+      <div class="intro-tile-circle translucent">
+        <div class="text-center p-5">
+          <h2>Hi, I'm Coop</h2>
+          <h3>Welcome to my Site. This is me.</h3>
+        </div>
+      </div>
+
+      <!-- Who I Am section -->
+      <div class="intro-tile-list translucent p-3">
+        <h2>Who I Am</h2>
+        <p>
+          Intro text goes here yada yada, reality this would be next to the big circle above, right justified
+        </p>
+
+        <h3>Something about me</h3>
+        <p>
+          Say something interesting about your business here.
+        </p>
+
+        <h3>More Stuff</h3>
+        <p>
+          What's something exciting about your business offers? Say it here.
+        </p>
+
+        <h3>Other Things</h3>
+        <p>
+          Give Customers a reason to do business with you.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="explore-tile-wrapper tile snap-scroll-start">
+
+    <!-- Wrapper for the content -->
+    <div class="explore-tile-content">
+      <h1 class="text-center w100">Explore</h1>
+
+      <!-- Row to hold all the picture links -->
+      <div class="d-flex flex-row justify-content-around mt-5">
+
+        <!-- A macro is a reusable piece of HTML -->
+        {% macro picture_link(title, href, src, body) %}
+        <div class="d-flex flex-column justify-content-around">
+          <h2><a href="{{href}}">{{title}}</a></h2>
+          <img src="{{src}}" style="object-fit: cover; height: 30vh; width: 25vw;">
+          <p>{{body}}</p>
+        </div>
+        {% endmacro %}
+
+        <!-- Create our three picture links with the macro above -->
+        {{ picture_link('My Experiences', '/experiences', '/static/img/my_experiences_thumbnail.jpg', 'Body') }}
+
+        {{ picture_link('My Passions', '/passions', '/static/img/climbing.jpg', 'Body') }}
+
+        {{ picture_link('My Thoughts', '/thoughts', '/static/img/desk.jpeg', 'Body') }}
+        
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
