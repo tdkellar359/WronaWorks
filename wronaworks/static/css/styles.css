@@ -1,34 +1,27 @@
 html, body {
   font-size: 16px;
   height: 100%;
-  background-color: lightgrey !important;
+  background-color: var(--light);
   overflow-y: auto;
-}
-
-h1.navbar-brand {
-  font-size: 2em;
-}
-
-ul.navbar-nav {
-  display: flex;
-  flex-direction: row;
-}
-
-li.nav-item ~ li.nav-item {
-  margin-left: 1em;
+  font-family: var(--font-family-monospace);
 }
 
 .footer {
-  background-color: darkgrey;
+  background-color: var(--dark);
   height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  color: var(--light)
+}
+
+i.fab ~ i.fab {
+  margin-left: 1em;
 }
 
 .translucent {
-  background-color: rgba(255, 255, 255, 0.75) !important;
+  background-color: #FFFFFFBE !important;
 }
 
 .snap-scroll {

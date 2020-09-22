@@ -10,7 +10,7 @@
     <div class="intro-tile-wrapper">
 
       <!-- The circle thingy -->
-      <div class="intro-tile-circle translucent">
+      <div class="intro-tile-circle">
         <div class="text-center p-5">
           <h2>Hi, I'm Coop</h2>
           <h3>Welcome to my Site. This is me.</h3>
@@ -18,7 +18,7 @@
       </div>
 
       <!-- Who I Am section -->
-      <div class="intro-tile-list translucent p-3">
+      <div class="intro-tile-list translucent text-right p-3">
         <h2>Who I Am</h2>
         <p>
           Intro text goes here yada yada, reality this would be next to the big circle above, right justified
@@ -53,19 +53,52 @@
 
         <!-- A macro is a reusable piece of HTML -->
         {% macro picture_link(title, href, src, body) %}
-        <div class="d-flex flex-column justify-content-around">
-          <h2><a href="{{href}}">{{title}}</a></h2>
-          <img src="{{src}}" style="object-fit: cover; height: 30vh; width: 25vw;">
-          <p>{{body}}</p>
+        <div class="picture-link">
+          <h2>{{title}}</h2>
+          <a href="{{href}}"><img src="{{src}}" class="picture-link-img"></a>
+          <p class="text-justify mt-2">{{body}}</p>
         </div>
         {% endmacro %}
 
         <!-- Create our three picture links with the macro above -->
-        {{ picture_link('My Experiences', '/experiences', '/static/img/my_experiences_thumbnail.jpg', 'Body') }}
+        {{picture_link(
+          'My Experiences',
+          '/experiences',
+          '/static/img/my_experiences_thumbnail.jpg',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.'
+        )}}
 
-        {{ picture_link('My Passions', '/passions', '/static/img/climbing.jpg', 'Body') }}
+        {{picture_link(
+          'My Passions',
+          '/passions',
+          '/static/img/climbing.jpg',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.'
+        )}}
 
-        {{ picture_link('My Thoughts', '/thoughts', '/static/img/desk.jpeg', 'Body') }}
+        {{picture_link(
+          'My Thoughts',
+          '/thoughts',
+          '/static/img/desk.jpeg',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.'
+        )}}
         
       </div>
     </div>
