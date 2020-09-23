@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <link rel="stylesheet" href="/static/css/index_styles.css">
-<div class="snap-scroll">
+<div>
 
   <!-- Wood Pane Background Image -->
   <div class="background-image tile snap-scroll-start">
@@ -13,13 +13,17 @@
       <div class="intro-tile-circle">
         <div class="text-center p-5">
           <h2>Hi, I'm Coop</h2>
-          <h3>Welcome to my Site. This is me.</h3>
+          <h3>Welcome to my Site.</h3>
+          <h3>This is me.</h3>
         </div>
       </div>
 
       <!-- Who I Am section -->
       <div class="intro-tile-list translucent text-right p-3">
-        <h2>Who I Am</h2>
+        <div class="title-line-wrapper">
+          <div class="title-line bg-primary mr-5"></div>
+          <h1 class="text-primary display-4">Who I Am</h1>
+        </div>
         <p>
           Intro text goes here yada yada, reality this would be next to the big circle above, right justified
         </p>
@@ -46,7 +50,11 @@
 
     <!-- Wrapper for the content -->
     <div class="explore-tile-content">
-      <h1 class="text-center w100">Explore</h1>
+      <div class="title-line-wrapper">
+        <div class="title-line bg-primary mx-5"></div>
+        <h1 class="text-primary display-4">Explore</h1>
+        <div class="title-line bg-primary mx-5"></div>
+      </div>
 
       <!-- Row to hold all the picture links -->
       <div class="d-flex flex-row justify-content-around mt-5">

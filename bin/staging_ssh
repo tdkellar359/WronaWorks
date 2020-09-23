@@ -1,0 +1,5 @@
+#!bin/bash
+#staging_ssh
+
+set -Eeuo pipefail
+ssh -i "~/.ssh/wrona_works.pem" ubuntu@ec2-52-15-255-130.us-east-2.compute.amazonaws.com

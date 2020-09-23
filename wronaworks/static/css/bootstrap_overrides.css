@@ -1,5 +1,14 @@
 :root {
-  --orange-transparent: #fd7d14be
+  --orange-transparent: #fd7d14da;
+  --white-transparent: #FFFFFFda;
+}
+
+.text-primary {
+  color: var(--orange) !important;
+}
+
+.bg-primary {
+  background-color: var(--orange) !important;
 }
 
 h1.navbar-brand {
@@ -15,11 +24,11 @@ li.nav-item ~ li.nav-item {
   margin-left: 1em;
 }
 
-.text-primary {
-  color: var(--orange) !important;
-}
-
 .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
   color: var(--orange);
   font-weight: bold;
+}
+
+.navbar.navbar-light.translucent {
+  backdrop-filter: blur(1px);
 }

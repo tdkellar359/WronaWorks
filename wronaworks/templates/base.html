@@ -56,23 +56,25 @@
     </nav>
 
     <!-- Content -->
-    <div class="content">
-      {% block content %}{% endblock %}
-    </div>
-
-    <div class="footer">
-      <div style="font-size: 1.5em" class="d-flex flex-direction-row">
-        <i class="fab fa-facebook-square"></i>
-        <i class="fab fa-twitter-square"></i>
-        <i class="fab fa-instagram-square"></i>
-        <i class="fab fa-pinterest-square"></i>
-        <i class="fab fa-linkedin"></i>
-        <i class="fab fa-youtube-square"></i>
+    <div class="snap-scroll">
+      <div class="content">
+        {% block content %}{% endblock %}
       </div>
-      <h3>Wrona Works</h3>
-      <div class="text-muted d-flex justify-content-between container">
-        <p>Copyright 2020 Wrona Works - All Rights Reserved</p>
-        <p>Created By: Tristan Kellar</p>
+  
+      <div class="footer snap-scroll-end">
+        <div style="font-size: 1.5em" class="d-flex flex-direction-row">
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-twitter-square"></i>
+          <i class="fab fa-instagram-square"></i>
+          <i class="fab fa-pinterest-square"></i>
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-youtube-square"></i>
+        </div>
+        <h3>Wrona Works</h3>
+        <div class="text-muted d-flex justify-content-between container">
+          <small>Copyright 2020 Wrona Works - All Rights Reserved</small>
+          <small>Created By: Tristan Kellar</small>
+        </div>
       </div>
     </div>
 

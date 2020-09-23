@@ -2,8 +2,8 @@ html, body {
   font-size: 16px;
   height: 100%;
   background-color: var(--light);
-  overflow-y: auto;
   font-family: var(--font-family-monospace);
+  overflow: hidden;
 }
 
 .footer {
@@ -16,18 +16,35 @@ html, body {
   color: var(--light)
 }
 
+.title-line-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-line-wrapper .title-line {
+  height: 0.15em;
+  flex-grow: 1;
+}
+
 i.fab ~ i.fab {
   margin-left: 1em;
 }
 
 .translucent {
-  background-color: #FFFFFFBE !important;
+  background-color: var(--white-transparent) !important;
 }
 
 .snap-scroll {
-  scroll-snap-type: y proximity;
+  overflow-y: auto;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
 }
 
 .snap-scroll-start {
   scroll-snap-align: start;
+}
+
+.snap-scroll-end {
+  scroll-snap-align: end;
 }

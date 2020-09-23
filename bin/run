@@ -11,6 +11,8 @@ set -Eeuo pipefail
 #   bin/insta485db create
 # fi
 
+source env/bin/activate
+
 export FLASK_DEBUG=True
 export FLASK_ENV=development
 export FLASK_APP=wronaworks
