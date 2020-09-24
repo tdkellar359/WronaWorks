@@ -22,7 +22,7 @@
   align-items: center;
   border-radius: 50%;
   width: 60vh;
-  background-color: var(--orange-transparent);
+  background-color: var(--tree-poppy-transparent);
 }
 
 .intro-tile-list {

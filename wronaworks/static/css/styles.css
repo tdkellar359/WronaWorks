@@ -1,9 +1,18 @@
 html, body {
-  font-size: 16px;
+  color: var(--dark);
+  font-size: 18px;
   height: 100%;
   background-color: var(--light);
-  font-family: var(--font-family-monospace);
+  font-family: 'PT Sans', sans-serif;
   overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Abril Fatface', sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 .footer {
