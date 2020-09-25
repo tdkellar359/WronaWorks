@@ -5,6 +5,7 @@ html, body {
   background-color: var(--light);
   font-family: 'PT Sans', sans-serif;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -13,6 +14,12 @@ h1, h2, h3, h4, h5, h6 {
 
 a:hover {
   text-decoration: none;
+}
+
+section.full-screen {
+  scroll-snap-align: start;
+  height: 100vh;
+  padding-top: 15vh;
 }
 
 .footer {

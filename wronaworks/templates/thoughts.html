@@ -1,4 +1,18 @@
 {% extends "base.html" %}
 {% block content%}
-  thoughts
+{% macro title(text) %}
+<div class="title-line-wrapper text-center">
+  <div class="title-line bg-primary mx-5"></div>
+  <h2 class="text-primary">{{text}}</h2>
+  <div class="title-line bg-primary mx-5"></div>
+</div>
+{% endmacro %}
+
+<div id="thoughts">
+  <section class="full-screen">
+    <div class="container text-center">
+      {{title('My Thoughts')}}
+    </div>
+  </section>
+</div>
 {% endblock %}

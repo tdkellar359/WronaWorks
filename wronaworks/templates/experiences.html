@@ -1,4 +1,49 @@
 {% extends "base.html" %}
 {% block content%}
-  experiences
+<link rel="stylesheet" href="/static/css/experiences_styles.css">
+
+{% macro title(text) %}
+<div class="title-line-wrapper text-center">
+  <div class="title-line bg-primary mx-5"></div>
+  <h2 class="text-primary">{{text}}</h2>
+  <div class="title-line bg-primary mx-5"></div>
+</div>
+{% endmacro %}
+
+{% macro picture_link(imgSrc, href, text) %}
+<a href="{{href}}">
+  <div class="picture-link-wrapper" style="background-image: url({{imgSrc}});">
+    <h2>{{text}}</h2>
+  </div>
+</a>
+{% endmacro %}
+
+<div id="experiences">
+  <section class="full-screen">
+    <div class="container">
+      {{title('Experiences')}}
+    </div>
+  </section>
+  <section class="full-screen">
+    <a id="professional">
+      <div class="container">
+        {{title('Professional')}}
+      </div>
+    </a>
+  </section>
+  <section class="full-screen">
+    <a id="academic">
+      <div class="container">
+        {{title('Academic')}}
+      </div>
+    </a>
+  </section>
+  <section class="full-screen">
+    <a id="skills">
+      <div class="container">
+        {{title('Skills')}}
+      </div>
+    </a>
+  </section>
+</div>
 {% endblock %}

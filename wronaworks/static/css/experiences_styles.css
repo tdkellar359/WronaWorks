@@ -1,0 +1,9 @@
+#experiences section:nth-child(even) {
+  background-color: var(--gray)
+}
+
+.picture-link-wrapper {
+  object-fit: cover;
+  background-size: 30vh 30vh;
+  height: 30vh;
+}

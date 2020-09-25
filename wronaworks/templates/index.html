@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 <link rel="stylesheet" href="/static/css/index_styles.css">
+
+<!-- A macro is a reusable piece of HTML -->
+{% macro picture_link(title, href, src, body) %}
+<div class="picture-link">
+  <p class="h3">{{title}}</p>
+  <a href="{{href}}"><img src="{{src}}" class="picture-link-img"></a>
+  <p class="text-justify text-muted mt-2">{{body}}</p>
+</div>
+{% endmacro %}
+
 <div>
 
   <!-- Wood Pane Background Image -->
@@ -12,9 +22,8 @@
       <!-- The circle thingy -->
       <div class="intro-tile-circle">
         <div class="text-center p-5">
-          <h2>Hi, I'm Coop</h2>
-          <h3>Welcome to my Site.</h3>
-          <h3>This is me.</h3>
+          <h1>Hi, I'm Coop</h1>
+          <p class="h3">Welcome to my Site. This is me.</p>
         </div>
       </div>
 
@@ -22,7 +31,7 @@
       <div class="intro-tile-list translucent text-right p-5">
         <div class="title-line-wrapper">
           <div class="title-line bg-primary mr-5"></div>
-          <h1 class="text-primary display-4">Who I Am</h1>
+          <h1 class="text-primary">Who I Am</h1>
         </div>
         <p>
           Intro text goes here yada yada, reality this would be next to the big circle above, right justified
@@ -52,21 +61,12 @@
     <div class="explore-tile-content">
       <div class="title-line-wrapper">
         <div class="title-line bg-primary mx-5"></div>
-        <h1 class="text-primary display-4">Explore</h1>
+        <h1 class="text-primary">Explore</h1>
         <div class="title-line bg-primary mx-5"></div>
       </div>
 
       <!-- Row to hold all the picture links -->
       <div class="d-flex flex-row justify-content-around mt-5">
-
-        <!-- A macro is a reusable piece of HTML -->
-        {% macro picture_link(title, href, src, body) %}
-        <div class="picture-link">
-          <h2>{{title}}</h2>
-          <a href="{{href}}"><img src="{{src}}" class="picture-link-img"></a>
-          <p class="text-justify mt-2">{{body}}</p>
-        </div>
-        {% endmacro %}
 
         <!-- Create our three picture links with the macro above -->
         {{picture_link(
@@ -76,10 +76,7 @@
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.'
+          nisi ut aliquip ex ea commodo consequat.'
         )}}
 
         {{picture_link(
@@ -89,10 +86,7 @@
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.'
+          nisi ut aliquip ex ea commodo consequat.'
         )}}
 
         {{picture_link(
@@ -102,10 +96,7 @@
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.'
+          nisi ut aliquip ex ea commodo consequat.'
         )}}
         
       </div>

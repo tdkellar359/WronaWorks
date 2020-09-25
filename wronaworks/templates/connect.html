@@ -1,4 +1,18 @@
 {% extends "base.html" %}
 {% block content%}
-  connect
+{% macro title(text) %}
+<div class="title-line-wrapper text-center">
+  <div class="title-line bg-primary mx-5"></div>
+  <h2 class="text-primary">{{text}}</h2>
+  <div class="title-line bg-primary mx-5"></div>
+</div>
+{% endmacro %}
+
+<div id="connect">
+  <section class="full-screen">
+    <div class="container">
+      {{title('Let\'s Connect')}}
+    </div>
+  </section>
+</div>
 {% endblock %}
